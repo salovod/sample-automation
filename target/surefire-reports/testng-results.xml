@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Simple test" duration-ms="20835" started-at="2015-02-03T15:25:17Z" finished-at="2015-02-03T15:25:38Z">
+    <groups>
+    </groups>
+    <test name="firstTest" duration-ms="20835" started-at="2015-02-03T15:25:17Z" finished-at="2015-02-03T15:25:38Z">
+      <class name="Tests.FirstTest">
+        <test-method status="PASS" signature="open()[pri:0, instance:Tests.FirstTest@3b6eb2ec]" name="open" is-config="true" duration-ms="5686" started-at="2015-02-03T17:25:17Z" finished-at="2015-02-03T17:25:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- open -->
+        <test-method status="PASS" signature="first()[pri:0, instance:Tests.FirstTest@3b6eb2ec]" name="first" duration-ms="1" started-at="2015-02-03T17:25:23Z" finished-at="2015-02-03T17:25:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- first -->
+        <test-method status="PASS" signature="close()[pri:0, instance:Tests.FirstTest@3b6eb2ec]" name="close" is-config="true" duration-ms="72" started-at="2015-02-03T17:25:23Z" finished-at="2015-02-03T17:25:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method status="PASS" signature="open()[pri:0, instance:Tests.FirstTest@3b6eb2ec]" name="open" is-config="true" duration-ms="7832" started-at="2015-02-03T17:25:23Z" finished-at="2015-02-03T17:25:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- open -->
+        <test-method status="PASS" signature="second()[pri:0, instance:Tests.FirstTest@3b6eb2ec]" name="second" duration-ms="1764" started-at="2015-02-03T17:25:31Z" finished-at="2015-02-03T17:25:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- second -->
+        <test-method status="PASS" signature="close()[pri:0, instance:Tests.FirstTest@3b6eb2ec]" name="close" is-config="true" duration-ms="73" started-at="2015-02-03T17:25:33Z" finished-at="2015-02-03T17:25:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method status="PASS" signature="open()[pri:0, instance:Tests.FirstTest@3b6eb2ec]" name="open" is-config="true" duration-ms="5324" started-at="2015-02-03T17:25:33Z" finished-at="2015-02-03T17:25:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- open -->
+        <test-method status="PASS" signature="third()[pri:0, instance:Tests.FirstTest@3b6eb2ec]" name="third" duration-ms="0" started-at="2015-02-03T17:25:38Z" finished-at="2015-02-03T17:25:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- third -->
+        <test-method status="PASS" signature="close()[pri:0, instance:Tests.FirstTest@3b6eb2ec]" name="close" is-config="true" duration-ms="69" started-at="2015-02-03T17:25:38Z" finished-at="2015-02-03T17:25:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- Tests.FirstTest -->
+    </test> <!-- firstTest -->
+  </suite> <!-- Simple test -->
+</testng-results>

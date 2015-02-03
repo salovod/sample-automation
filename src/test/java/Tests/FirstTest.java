@@ -13,21 +13,16 @@ public class FirstTest {
     final static String baseURL = "http://www.softwaretestinghelp.com/testng-framework-selenium-tutorial-12/";
 
 
-    @BeforeClass
-    public void setUp() {
+    @BeforeMethod
+    public void open() {
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.get(baseURL);
     }
 
-    @AfterClass
-    public void setDown() {
-        driver.close();
-    }
-
     @AfterMethod
     public void close() {
-        driver.close();
+            driver.quit();
     }
 
     @Test
