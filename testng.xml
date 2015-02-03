@@ -1,0 +1,14 @@
+<suite name="Simple test">
+    <parameter name="base.url" value="http://www.softwaretestinghelp.com/testng-framework-selenium-tutorial-12/"/>
+    <test name="firstTest" preserve-order="true">
+        <classes>
+            <class name="Tests.FirstTest">
+                <methods>
+                    <include name="first"/>
+                    <include name="second"/>
+                    <include name="third"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
