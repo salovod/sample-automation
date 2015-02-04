@@ -1,21 +1,39 @@
 package Tests;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.*;
-
-import java.util.Objects;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 public class FirstTest {
 
-    WebDriver driver;
+    static WebDriver driver;
 
-    final static String baseURL = "http://www.softwaretestinghelp.com/testng-framework-selenium-tutorial-12/";
+    final static String baseURL = "https://www.google.com.ua/";
 
-
-    @BeforeMethod
-    public void open() {
-        driver = new FirefoxDriver();
+    public void beforeTest(String browser)
+    {
+        if (browser.equalsIgnoreCase("firefox"))
+        {
+            driver = new FirefoxDriver();
+        } else if (browser.equalsIgnoreCase("chrome"))
+        {
+            System.setProperty("webdriver.chrome.driver", "/home/rb/Documents/GIT/sample-automation/src/main/java/resources/chromedriver");
+            driver = new ChromeDriver();
+        }
+        else if (browser.equalsIgnoreCase("ie"))
+        {
+            System.setProperty("webdriver.ie.driver", "D://Selenium/IEDriverServer.exe");
+            driver = new InternetExplorerDriver();
+        }
+        else
+        {
+            throw new IllegalArgumentException("The Browser Type is Undefined");
+        }
         driver.manage().window().maximize();
         driver.get(baseURL);
     }
@@ -25,18 +43,23 @@ public class FirstTest {
             driver.quit();
     }
 
+    @Parameters({"browser"})
     @Test
-    public void first() {
+    public void first(String browser) {
+        beforeTest(browser);
 
     }
 
+    @Parameters({"browser"})
     @Test
-    public void second() {
+    public void second(String browser) {
+        beforeTest(browser);
         driver.get("http://www.softwaretestinghelp.com");
     }
 
+    @Parameters({"browser"})
     @Test
-    public void third() {
-
+    public void third(String browser) {
+        beforeTest(browser);
     }
 }

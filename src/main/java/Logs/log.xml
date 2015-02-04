@@ -1,0 +1,49 @@
+[TestNG] Running:
+  /home/rb/.IdeaIC14/system/temp-testng-customsuite.xml
+
+
+===============================================
+Custom suite
+Total tests run: 3, Failures: 0, Skips: 3
+===============================================
+
+org.testng.TestNGException: 
+Parameter 'browser' is required by @Test on method first but has not been marked @Optional or defined
+in /home/rb/.IdeaIC14/system/temp-testng-customsuite.xml
+[TestNG] Running:
+  /home/rb/.IdeaIC14/system/temp-testng-customsuite.xml
+
+
+===============================================
+Custom suite
+Total tests run: 3, Failures: 0, Skips: 3
+===============================================
+
+org.testng.TestNGException: 
+Parameter 'browser' is required by @Test on method first but has not been marked @Optional or defined
+in /home/rb/.IdeaIC14/system/temp-testng-customsuite.xml
+[TestNG] Running:
+  /home/rb/.IdeaIC14/system/temp-testng-customsuite.xml
+
+
+===============================================
+Custom suite
+Total tests run: 3, Failures: 0, Skips: 3
+Configuration Failures: 1, Skips: 1
+===============================================
+
+org.testng.TestNGException: 
+Parameter 'browser' is required by @Test on method first but has not been marked @Optional or defined
+in /home/rb/.IdeaIC14/system/temp-testng-customsuite.xml
+[TestNG] Running:
+  /home/rb/.IdeaIC14/system/temp-testng-customsuite.xml
+
+
+===============================================
+Custom suite
+Total tests run: 3, Failures: 0, Skips: 3
+===============================================
+
+org.testng.TestNGException: 
+Parameter 'browser' is required by @Test on method first but has not been marked @Optional or defined
+in /home/rb/.IdeaIC14/system/temp-testng-customsuite.xml
