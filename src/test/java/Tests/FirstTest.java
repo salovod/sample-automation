@@ -4,8 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -15,20 +15,24 @@ public class FirstTest {
 
     final static String baseURL = "https://www.google.com.ua/";
 
-    public void beforeTest(String browser)
+    public void beforeTest(String browser, String version) throws Exception
     {
+        DesiredCapabilities caps = new DesiredCapabilities();
         if (browser.equalsIgnoreCase("firefox"))
         {
             driver = new FirefoxDriver();
+            caps.setCapability("browser_version", version);
         } else if (browser.equalsIgnoreCase("chrome"))
         {
             System.setProperty("webdriver.chrome.driver", "/home/rb/Documents/GIT/sample-automation/src/main/java/resources/chromedriver");
             driver = new ChromeDriver();
+            caps.setCapability("browser_version", version);
         }
         else if (browser.equalsIgnoreCase("ie"))
         {
             System.setProperty("webdriver.ie.driver", "D://Selenium/IEDriverServer.exe");
             driver = new InternetExplorerDriver();
+            caps.setCapability("browser_version", version);
         }
         else
         {
@@ -36,6 +40,7 @@ public class FirstTest {
         }
         driver.manage().window().maximize();
         driver.get(baseURL);
+//        System.out.println(getClass().getResource("chromedriver").getPath());
     }
 
     @AfterMethod
@@ -43,23 +48,23 @@ public class FirstTest {
             driver.quit();
     }
 
-    @Parameters({"browser"})
+    @Parameters({"browser", "version"})
     @Test
-    public void first(String browser) {
-        beforeTest(browser);
+    public void first(String browser, String version) throws Exception {
+        beforeTest(browser, version);
 
     }
 
-    @Parameters({"browser"})
+    @Parameters({"browser", "version"})
     @Test
-    public void second(String browser) {
-        beforeTest(browser);
+    public void second(String browser, String version) throws Exception {
+        beforeTest(browser, version);
         driver.get("http://www.softwaretestinghelp.com");
     }
 
-    @Parameters({"browser"})
+    @Parameters({"browser", "version"})
     @Test
-    public void third(String browser) {
-        beforeTest(browser);
+    public void third(String browser, String version) throws Exception {
+        beforeTest(browser, version);
     }
 }

@@ -1,7 +1,8 @@
 <suite name="Simple test">
     <parameter name="base.url" value="http://www.softwaretestinghelp.com/testng-framework-selenium-tutorial-12/"/>
     <test name="FirefoxTest" preserve-order="true">
-        <parameter name="browser" value="chrome" />
+        <parameter name="browser" value="chrome"/>
+        <parameter name="version" value="38"/>
         <classes>
             <class name="Tests.FirstTest">
                 <methods>
