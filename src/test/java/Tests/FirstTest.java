@@ -15,44 +15,37 @@ public class FirstTest {
 
     final static String baseURL = "https://www.google.com.ua/";
 
-    public void beforeTest(String browser, String version) throws Exception
-    {
+    public void beforeTest(String browser, String version) throws Exception {
         DesiredCapabilities caps = new DesiredCapabilities();
-        if (browser.equalsIgnoreCase("firefox"))
-        {
+        if (browser.equalsIgnoreCase("firefox")) {
             driver = new FirefoxDriver();
             caps.setCapability("browser_version", version);
-        } else if (browser.equalsIgnoreCase("chrome"))
-        {
+        } else if (browser.equalsIgnoreCase("chrome")) {
             System.setProperty("webdriver.chrome.driver", "/home/rb/Documents/GIT/sample-automation/src/main/java/resources/chromedriver");
             driver = new ChromeDriver();
             caps.setCapability("browser_version", version);
-        }
-        else if (browser.equalsIgnoreCase("ie"))
-        {
+        } else if (browser.equalsIgnoreCase("ie")) {
             System.setProperty("webdriver.ie.driver", "D://Selenium/IEDriverServer.exe");
             driver = new InternetExplorerDriver();
             caps.setCapability("browser_version", version);
-        }
-        else
-        {
+        } else {
             throw new IllegalArgumentException("The Browser Type is Undefined");
         }
         driver.manage().window().maximize();
         driver.get(baseURL);
-//        System.out.println(getClass().getResource("chromedriver").getPath());
     }
 
     @AfterMethod
     public void close() {
-            driver.quit();
+        driver.quit();
     }
 
     @Parameters({"browser", "version"})
     @Test
     public void first(String browser, String version) throws Exception {
+        Parse parse = new Parse();
+        parse.main();
         beforeTest(browser, version);
-
     }
 
     @Parameters({"browser", "version"})
