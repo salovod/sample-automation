@@ -14,7 +14,6 @@ practice
 
 6) browser type / version should be presented in xml parameters
 
-
-7) xml парсер параметров оформить в виде отдельного утилити класса
+7) xml parcer
 
 8) browser support: ie / ff / chrome
