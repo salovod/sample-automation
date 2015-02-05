@@ -11,7 +11,7 @@ import java.io.File;
 
 public class Parse {
 
-    public static void main() {
+    public static void main(String value) {
         try {
             File stocks = new File("/home/rb/Documents/GIT/sample-automation/stock.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -19,18 +19,14 @@ public class Parse {
             Document doc = dBuilder.parse(stocks);
             doc.getDocumentElement().normalize();
 
-            System.out.println("root of xml file" + doc.getDocumentElement().getNodeName());
             NodeList nodes = doc.getElementsByTagName("stock");
-            System.out.println("==========================");
 
             for (int i = 0; i < nodes.getLength(); i++) {
                 Node node = nodes.item(i);
 
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element element = (Element) node;
-                    System.out.println("Stock Symbol: " + getValue("symbol", element));
-                    System.out.println("Stock Price: " + getValue("price", element));
-                    System.out.println("Stock Quantity: " + getValue("quantity", element));
+                            System.out.println("Stock Symbol: " + getValue(value, element));
                 }
             }
         } catch (Exception ex) {
