@@ -15,10 +15,11 @@ public class FirstTest {
 
     static WebDriver driver;
 
+    Parse parse;
+
     final static String baseURL = "https://www.google.com.ua/";
 
     public void beforeTest(String browser, String version) throws Exception {
-        Parse parse = new Parse();
         DesiredCapabilities caps = new DesiredCapabilities();
         if (browser.equalsIgnoreCase("firefox")) {
             driver = new FirefoxDriver();
@@ -47,7 +48,7 @@ public class FirstTest {
     @Test
     public void first(String browser, String version, ITestContext itc) throws Exception {
         beforeTest(browser, version);
-//        driver.findElement(By.className("gbqfif")).sendKeys(a);
+        driver.findElement(By.className("gbqfif")).sendKeys(parse.mainParse("symbol"));
         Thread.sleep(10000);
     }
 
