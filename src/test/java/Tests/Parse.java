@@ -11,9 +11,17 @@ import java.io.File;
 
 public class Parse {
 
-    public static String mainParse(String value) {
+    private static String getValue(String tag, Element element) {
+        NodeList nodes = element.getElementsByTagName(tag).item(0).getChildNodes();
+        Node node = (Node) nodes.item(0);
+        return node.getNodeValue();
+    }
+
+    public String mainParse(String value) {
         String query = "";
         try {
+            String path = System.setProperty("testng", getClass().getResource("/stock.xml").getPath());
+            System.out.println(getClass().getResource("/stock.xml").getPath());
             File stocks = new File("/home/rb/Documents/GIT/sample-automation/stock.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -28,18 +36,12 @@ public class Parse {
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element element = (Element) node;
                     query = getValue(value, element);
-//                    System.out.println("Stock Symbol: " + getValue(value, element));
+                    System.out.println("Stock Symbol: " + getValue(value, element));
                 }
             }
         } catch (Exception ex) {
             ex.printStackTrace();
         }
         return query;
-    }
-
-    private static String getValue(String tag, Element element) {
-        NodeList nodes = element.getElementsByTagName(tag).item(0).getChildNodes();
-        Node node = (Node) nodes.item(0);
-        return node.getNodeValue();
     }
 }
