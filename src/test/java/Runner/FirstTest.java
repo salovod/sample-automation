@@ -31,17 +31,14 @@ public class FirstTest {
     @Test
     public void first() throws InterruptedException {
         driver.findElement(By.className("gbqfif")).sendKeys("qwee");
-        Thread.sleep(3000);
     }
 
     @Test
     public void second() throws InterruptedException {
         driver.get("http://www.softwaretestinghelp.com");
-        Thread.sleep(3000);
     }
 
     @Test
     public void third() throws InterruptedException {
-        Thread.sleep(3000);
     }
 }
