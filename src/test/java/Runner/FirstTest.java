@@ -1,5 +1,6 @@
-package Tests;
+package Runner;
 
+import Utils.DriverUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
@@ -16,7 +17,7 @@ public class FirstTest {
     public void start(ITestContext context) throws Exception {
         driver = DriverUtils.selectDriver(
                 context.getCurrentXmlTest().getParameter("browser"),
-                context.getCurrentXmlTest().getParameter("version")
+                context.getCurrentXmlTest().getParameter("brversion")
         );
         driver.manage().window().maximize();
         driver.get(baseURL);
@@ -28,16 +29,19 @@ public class FirstTest {
     }
 
     @Test
-    public void first() {
-        driver.findElement(By.className("gbqfif")).sendKeys("symbol");
+    public void first() throws InterruptedException {
+        driver.findElement(By.className("gbqfif")).sendKeys("qwee");
+        Thread.sleep(3000);
     }
 
     @Test
-    public void second() {
+    public void second() throws InterruptedException {
         driver.get("http://www.softwaretestinghelp.com");
+        Thread.sleep(3000);
     }
 
     @Test
-    public void third() {
+    public void third() throws InterruptedException {
+        Thread.sleep(3000);
     }
 }

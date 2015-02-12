@@ -2,9 +2,9 @@
     <parameter name="base.url" value="http://www.softwaretestinghelp.com/testng-framework-selenium-tutorial-12/"/>
     <test name="ChromeTest" preserve-order="true">
         <parameter name="browser" value="chrome"/>
-        <parameter name="version" value="38"/>
+        <parameter name="brversion" value="30"/>
         <classes>
-            <class name="Tests.FirstTest">
+            <class name="Runner.FirstTest">
                 <methods>
                     <include name="first"/>
                     <include name="second"/>
@@ -15,9 +15,9 @@
     </test>
     <test name="FirefoxTest" preserve-order="true">
         <parameter name="browser" value="firefox"/>
-        <parameter name="version" value="38"/>
+        <parameter name="version" value="25"/>
         <classes>
-            <class name="Tests.FirstTest">
+            <class name="Runner.FirstTest">
                 <methods>
                     <include name="first"/>
                     <include name="second"/>
